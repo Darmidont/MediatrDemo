@@ -7,3 +7,7 @@
 /MyMediatrDemo/MyMediatrDemo/obj
 /MyMediatrDemo/.vs/MyMediatrDemo/v17
 /MyMediatrDemo/.vs/MyMediatrDemo/DesignTimeBuild
+/MyMediatrDemo/MediatrImplementation/obj
+/MyMediatrDemo/MediatrImplementation/bin/Debug/netstandard2.0
+/MyMediatrDemo/MediatrInfrastructure/obj
+/MyMediatrDemo/MediatrInfrastructure/bin/Debug/netstandard2.0
