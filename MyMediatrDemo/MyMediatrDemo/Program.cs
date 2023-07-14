@@ -1,3 +1,4 @@
+using MediatrInfrastructure.Handlers.Queries;
 using System.Reflection;
 
 namespace MyMediatrDemo
@@ -9,7 +10,7 @@ namespace MyMediatrDemo
             var builder = WebApplication.CreateSlimBuilder(args);
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetAssembly(typeof(TestQueryHandler))));
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();

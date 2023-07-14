@@ -1,5 +1,7 @@
-﻿using System.Runtime.InteropServices.ComTypes;
+﻿using MediatR;
+using MediatrInfrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
+using MediatrInfrastructure.Handlers.Queries;
 
 namespace MyMediatrDemo.Controllers
 {
@@ -7,10 +9,17 @@ namespace MyMediatrDemo.Controllers
     [Route("[controller]")]
     public class TestController : ControllerBase
     {
-        [HttpGet("index")]
-        public async Task<int> Get()
+        private readonly IMediator _mediator;
+
+        public TestController(IMediator mediator)
         {
-            return await Task.FromResult(5);
+            _mediator = mediator;
+        }
+
+        [HttpGet("index")]
+        public async Task<TestQueryResult> Get()
+        {
+            return await _mediator.Send(new TestQuery(), CancellationToken.None);
         }
     }
 }

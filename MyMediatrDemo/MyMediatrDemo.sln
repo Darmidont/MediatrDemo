@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.33906.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediatrDemo", "MyMediatrDemo\MyMediatrDemo.csproj", "{A89F0F17-B260-4952-9B4C-2A25A60A155B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrInfrastructure.Models", "MediatrInfrastructure\MediatrInfrastructure.Models.csproj", "{6A109F93-5F63-4A38-966C-5DE8E0B10D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrInfrastructure.Handlers", "MediatrImplementation\MediatrInfrastructure.Handlers.csproj", "{10ABA24A-746D-4C4C-A633-0E35A927B34D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A89F0F17-B260-4952-9B4C-2A25A60A155B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A89F0F17-B260-4952-9B4C-2A25A60A155B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A89F0F17-B260-4952-9B4C-2A25A60A155B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A109F93-5F63-4A38-966C-5DE8E0B10D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A109F93-5F63-4A38-966C-5DE8E0B10D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A109F93-5F63-4A38-966C-5DE8E0B10D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A109F93-5F63-4A38-966C-5DE8E0B10D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10ABA24A-746D-4C4C-A633-0E35A927B34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10ABA24A-746D-4C4C-A633-0E35A927B34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10ABA24A-746D-4C4C-A633-0E35A927B34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10ABA24A-746D-4C4C-A633-0E35A927B34D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
