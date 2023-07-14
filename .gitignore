@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MyMediatrDemo/MyMediatrDemo/obj/Debug/net8.0
+/MyMediatrDemo/MyMediatrDemo/bin/Debug/net8.0
+/MyMediatrDemo/MyMediatrDemo/obj
+/MyMediatrDemo/.vs/MyMediatrDemo/v17
