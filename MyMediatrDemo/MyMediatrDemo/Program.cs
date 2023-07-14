@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace MyMediatrDemo
 {
     public class Program
@@ -5,17 +7,21 @@ namespace MyMediatrDemo
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateSlimBuilder(args);
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            var sampleTodos = TodoGenerator.GenerateTodos().ToArray();
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
 
-            var todosApi = app.MapGroup("/todos");
-            todosApi.MapGet("/", () => sampleTodos);
-            todosApi.MapGet("/{id}", (int id) =>
-                sampleTodos.FirstOrDefault(a => a.Id == id) is { } todo
-                    ? Results.Ok(todo)
-                    : Results.NotFound());
+            app.UseHttpsRedirection();
+            app.MapControllers();
 
             app.Run();
         }

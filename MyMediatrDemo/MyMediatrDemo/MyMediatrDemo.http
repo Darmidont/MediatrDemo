@@ -1,11 +1,11 @@
 @MyMediatrDemo_HostAddress = http://localhost:5002
 
-GET {{MyMediatrDemo_HostAddress}}/todos/
+GET {{MyMediatrDemo_HostAddress}}/test/
 Accept: application/json
 
 ###
 
-GET {{MyMediatrDemo_HostAddress}}/todos/1
+GET {{MyMediatrDemo_HostAddress}}/test/1
 Accept: application/json
 
 ###
